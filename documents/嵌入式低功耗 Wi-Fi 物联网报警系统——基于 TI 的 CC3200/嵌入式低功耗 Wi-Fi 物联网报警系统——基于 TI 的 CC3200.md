@@ -379,6 +379,6 @@ Web 服务器解析 HTTP 协议，并提供一个可以执行服务器端程序�
 
 DIY 开源项目仓库：
 
-- https://github.com/createshare/DIY__wi-fi_alarm_CC3200
-- https://gitee.com/createshare/DIY__wi-fi_alarm_CC3200
+- https://github.com/createshare/DIY__wi-fi-alarm_IOT
+- https://gitee.com/createshare/DIY__wi-fi-alarm_IOT
 
