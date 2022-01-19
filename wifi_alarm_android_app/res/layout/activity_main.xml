@@ -1,0 +1,265 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFCC"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.wifi_alarm.MainActivity" 
+    
+    android:id="@+id/mWindow"  
+    
+	android:focusable="true" 
+	android:focusableInTouchMode="true" 
+	>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="#FF0033"
+        android:shadowRadius="30.0"
+        android:text="Wi-Fi   报警器"
+        android:textColor="#0033FF"
+        android:textSize="16pt" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:onClick="Alarm_clickHandler"
+        android:text="模拟报警" />
+
+    <TextView
+        android:id="@+id/ID01_timeText01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ID01"
+        android:layout_toLeftOf="@+id/clearButton1"
+        android:background="@drawable/bg_border"
+        android:text="20XX年XX月XX日"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/ID01_timeText02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ID01_timeText01"
+        android:layout_below="@+id/ID01_timeText01"
+        android:background="@drawable/bg_border"
+        android:text="XX时XX分XX秒"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/ID_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ID01"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="6dp"
+        android:text=" ID   名称       状态       时间        按钮"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#6600FF"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/ID01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_below="@+id/ID_Text"
+        android:layout_marginTop="13dp"
+        android:text="1号"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="7pt" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/clearButton1"
+        android:layout_toLeftOf="@+id/ID01_timeText01"
+        android:src="@drawable/green" />
+
+    <EditText
+        android:id="@+id/nameEdit01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ID01"
+        android:layout_alignBottom="@+id/ID01"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:layout_toRightOf="@+id/ID01"
+        android:ems="8"
+        android:hint="未使用"
+        android:maxLength="8"
+        android:maxLines="2"
+        android:textSize="7pt" >
+
+ 
+    </EditText>
+
+    <Button
+        android:id="@+id/clearButton1"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/ID01"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:onClick="ID01_clearAlarm_clickHandler"
+        android:shadowColor="#336633"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="20.0"
+        android:text="清除"
+        android:textSize="7pt" />
+
+    <TextView
+        android:id="@+id/ID02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="22dp"
+        android:layout_toLeftOf="@+id/nameEdit01"
+        android:text="2号"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="7pt" />
+
+    <EditText
+        android:id="@+id/nameEdit02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ID02"
+        android:layout_alignBottom="@+id/ID02"
+        android:layout_alignRight="@+id/nameEdit01"
+        android:layout_toRightOf="@+id/ID02"
+        android:ems="8"
+        android:hint="未使用"
+        android:maxLength="8"
+        android:maxLines="2"
+        android:textSize="7pt" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="7dp"
+        android:layout_toLeftOf="@+id/ID01_timeText01"
+        android:src="@drawable/green" />
+
+    <TextView
+        android:id="@+id/ID02_timeText01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameEdit02"
+        android:layout_alignBottom="@+id/nameEdit02"
+        android:layout_toLeftOf="@+id/clearButton1"
+        android:background="@drawable/bg_border"
+        android:text="20XX年XX月XX日"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/ID02_timeText02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ID02"
+        android:layout_toLeftOf="@+id/clearButton1"
+        android:background="@drawable/bg_border"
+        android:text="XX时XX分XX秒"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="6pt" />
+
+    <Button
+        android:id="@+id/clearButton2"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignLeft="@+id/clearButton1"
+        android:onClick="ID02_clearAlarm_clickHandler"
+        android:shadowColor="#336633"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="20.0"
+        android:text="清除"
+        android:textSize="7pt" />
+
+    <TextView
+        android:id="@+id/ID03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="25dp"
+        android:layout_toLeftOf="@+id/nameEdit02"
+        android:text="3号"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="7pt" />
+
+    <EditText
+        android:id="@+id/nameEdit03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ID03"
+        android:layout_alignBottom="@+id/ID03"
+        android:layout_alignLeft="@+id/nameEdit02"
+        android:layout_alignRight="@+id/nameEdit02"
+        android:ems="8"
+        android:hint="未使用"
+        android:maxLength="8"
+        android:maxLines="2"
+        android:textSize="7pt" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/nameEdit03"
+        android:src="@drawable/green" />
+
+    <TextView
+        android:id="@+id/ID03_timeText01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ID03"
+        android:layout_toLeftOf="@+id/clearButton1"
+        android:background="@drawable/bg_border"
+        android:text="20XX年XX月XX日"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="6pt" />
+
+    <TextView
+        android:id="@+id/ID03_timeText02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ID03_timeText01"
+        android:layout_toLeftOf="@+id/clearButton1"
+        android:background="@drawable/bg_border"
+        android:text="XX时XX分XX秒"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="6pt" />
+
+    <Button
+        android:id="@+id/clearButton3"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignLeft="@+id/clearButton2"
+        android:onClick="ID03_clearAlarm_clickHandler"
+        android:shadowColor="#336633"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="20.0"
+        android:text="清除"
+        android:textSize="7pt" />
+
+</RelativeLayout>

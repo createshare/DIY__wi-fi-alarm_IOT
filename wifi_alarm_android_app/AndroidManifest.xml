@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 指定Android应用的“包名”，该“包名”可用于唯一地表示该应用 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wifi_alarm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 指定Android应用的"最低的版本要求"和该应用针对的Android版本 -->
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <!-- 指定Android应用的“应用标签”和“图标”，--> 
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- 定义Android应用的一个“组件：Activity”，
+     	         该Activity的类为MainActivity，并指定该Activity的标签-->    
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <!-- 指定该Activity是程序的入口-->  
+                <action android:name="android.intent.action.MAIN" />
+				
+                <!-- 指定加载该应用时，运行该Activity -->  
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    
+	<!-- 授权访问网络 ,需要添加网络访问权限-->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+</manifest>
